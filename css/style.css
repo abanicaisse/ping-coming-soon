@@ -1,0 +1,135 @@
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --darker-blue: hsl(209, 33%, 12%);
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Libre Franklin" sans-serif;
+    font-size: 1.25rem;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    margin: auto 0;
+    display: grid;
+    align-items: center;
+}
+
+article {
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+article > img {
+    margin-bottom: 2rem;
+}
+
+article > h1 {
+    color: var(--gray);
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+article > h1 > span {
+    color: var(--darker-blue);
+    font-weight: 700;
+}
+
+article > p {
+    color: var(--darker-blue);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+form {
+    margin-bottom: 3rem;
+}
+
+form input {
+    width: min(100%, 30rem);
+    margin: auto;
+    display: block;
+    /* color: var(--pale-blue); */
+    border: 1px solid var(--blue);
+    border-radius: 1rem;
+    padding: .5rem 2rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 360px) {
+    form input {
+        padding: .5rem 1rem;
+    }
+}
+
+form input[type="submit"] {
+    background-color: var(--blue);
+    color: white;
+    box-shadow: 5px 5px 10px var(--gray);
+}
+
+form input[type="submit"]:hover {
+    transform: scale(1.025);
+}
+
+.dashboard {
+    width: 100%;
+    /* background-color: red; */
+}
+
+.dashboard img {
+    max-width: 100%;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    /* margin-top: auto; */
+}
+
+footer > * {
+    width: 90%;
+    margin: auto;
+}
+
+footer > .icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+footer .fab {
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    color: var(--blue);
+    border: 1px solid var(--gray);
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+footer > p {
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: var(--blue);
+}
