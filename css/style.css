@@ -17,7 +17,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    font-family: "Libre Franklin" sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
     font-size: 1.25rem;
 }
 
@@ -66,24 +66,27 @@ form input {
     display: block;
     border: 1px solid var(--blue);
     border-radius: 1rem;
-    padding: .5rem 2rem;
+    padding: .5rem 1rem;
     margin-bottom: 1rem;
-}
-
-@media screen and (max-width: 360px) {
-    form input {
-        padding: .5rem 1rem;
-    }
 }
 
 form input[type="submit"] {
     background-color: var(--blue);
+    cursor: pointer;
     color: white;
     box-shadow: 5px 5px 10px var(--gray);
 }
 
 form input[type="submit"]:hover {
     transform: scale(1.025);
+}
+
+.error-msg {
+    display: none;
+    color: var(--light-red);
+    font-size: 1rem;
+    margin-top: -.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .dashboard {
@@ -140,8 +143,19 @@ footer a {
     }
 
     form {
+        /* background-color: yellow; */
         display: flex;
         justify-content: center;
+    }
+
+    form > div {
+        position: relative;
+    }
+
+    .error-msg {
+        position: absolute;
+        bottom: -2.5rem;
+        left: 1rem;
     }
     
     form input {

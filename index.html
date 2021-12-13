@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://kit.fontawesome.com/5ed75722e8.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
@@ -18,8 +22,9 @@
       <p>Subscribe and get notified</p>
       <form class="notify">
         <div>
-          <input type="email" name="email" placeholder="Your email address..." id="email">
-          <label for="eamil"><input type="submit" value="Notify Me"></label>
+          <input type="email" name="email" placeholder="Your email address..." id="email" autocomplete="email">
+          <p class="error-msg">Please provide a valid email address</p>
+          <label for="eamil" class="label"><input type="submit" value="Notify Me"></label>
         </div>
       </form>
       <div class="dashboard">
@@ -28,9 +33,9 @@
 
       <!-- <div> -->
         <div class="icon">
-          <i class="fab fa-facebook">vv</i>
-          <i class="fab fa-twitter">vv</i>
-          <i class="fab fa-instagram">vv</i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
         </div>
         <p>&copy; Copyright Ping. All rights reserved.</p>
       <!-- </div> -->
@@ -44,5 +49,7 @@
       Coded by <a href="https://www.github.com/abanicaisse">Aba Nicaisse</a>.
     </p>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
