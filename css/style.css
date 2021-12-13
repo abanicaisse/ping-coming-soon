@@ -61,10 +61,9 @@ form {
 }
 
 form input {
-    width: min(100%, 30rem);
+    width: min(100%, 25rem);
     margin: auto;
     display: block;
-    /* color: var(--pale-blue); */
     border: 1px solid var(--blue);
     border-radius: 1rem;
     padding: .5rem 2rem;
@@ -89,31 +88,20 @@ form input[type="submit"]:hover {
 
 .dashboard {
     width: 100%;
-    /* background-color: red; */
+    margin-bottom: 2rem;
 }
 
 .dashboard img {
     max-width: 100%;
 }
 
-footer {
-    width: 100%;
-    text-align: center;
-    /* margin-top: auto; */
-}
-
-footer > * {
-    width: 90%;
-    margin: auto;
-}
-
-footer > .icon {
+.icon {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
 }
 
-footer .fab {
+.icon .fab {
     width: 2rem;
     height: 2rem;
     display: grid;
@@ -124,12 +112,46 @@ footer .fab {
     margin-right: .5rem;
 }
 
-footer > p {
+.dashboard ~ p {
     color: var(--gray);
     margin-bottom: 2rem;
 }
 
-footer > p > a {
+footer {
+    width: 100%;
+    color: var(--gray);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+footer > * {
+    width: 90%;
+    margin: auto;
+}
+
+footer a {
     text-decoration: none;
-    color: var(--blue);
+    color: var(--blue);   
+}
+
+@media screen and (min-width: 1000px) {
+    article {
+        width: min(70%);
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+    }
+    
+    form input {
+        width: initial;
+        margin: auto;
+        display: inline;
+    }
+
+    form input[type="email"] {
+        width: 20rem;
+        margin-right: .5rem;
+    }
 }
